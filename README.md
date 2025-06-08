@@ -11,8 +11,10 @@ Aplikacja automatycznie pobiera, selekcjonuje i prezentuje dane o wydarzeniach s
 2. **Zbuduj i uruchom wszystkie kontenery za pomocą Docker Compose:**
 docker-compose down -v
 docker-compose up --build
-![docker up](img/up.png)
-3. **Sprawdź, czy wszystkie kontenery są uruchomione:**
+
+![docker up](img/build.png)
+
+4. **Sprawdź, czy wszystkie kontenery są uruchomione:**
 Powinieneś zobaczyć trzy kontenery: `projekt-app`, `projekt-scraper`, `projekt-redis-1`.
 
 ![docker ps](img/ps.png)
