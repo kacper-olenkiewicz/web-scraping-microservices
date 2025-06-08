@@ -10,6 +10,7 @@ Aplikacja automatycznie pobiera, selekcjonuje i prezentuje dane o wydarzeniach s
 
 2. **Zbuduj i uruchom wszystkie kontenery za pomocą Docker Compose:**
 docker-compose down -v
+
 docker-compose up --build
 
 ![docker up](img/build.png)
