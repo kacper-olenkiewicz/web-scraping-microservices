@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wyniki scrapowania biletów</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Ostatnie wyniki scrapowania</h1>
+        <div class="event-list">
+            {% if data %}
+                {% for event in data %}
+                    {% if event is mapping and event.prices is defined %}
+                        <div class="event">
+                            <div class="event-info">
+                                <div class="event-title">{{ event.title }}</div>
+                                <div class="event-date">{{ event.date }}</div>
+                                <div class="event-category">Kategoria: {{ event.category }}</div>
+                            </div>
+                            <div class="event-prices">
+                                {% if event.prices|length > 1 %}
+                                    <span class="price discounted">{{ event.prices[0] }}</span>
+                                    <span class="price">{{ event.prices[1] }}</span>
+                                {% else %}
+                                    <span class="price">{{ event.prices[0] }}</span>
+                                {% endif %}
+                                <br>
+                                <a class="buy-btn" href="{{ event.link or '#' }}">Kup bilet</a>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <div class="no-data">Brak danych do wyświetlenia.</div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
