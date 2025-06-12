@@ -17,7 +17,7 @@ docker-compose up --build
 ![docker up](img/build.png)
 
 3. **Sprawdź, czy wszystkie kontenery są uruchomione:**
-Powinieneś zobaczyć trzy kontenery: `projekt-app`, `projekt-scraper`, `projekt-redis-1`.
+Powinieneś zobaczyć trzy kontenery: `projekt-app`, `projekt-scraper`, `redis:alphine`.
 
 ![docker ps](img/ps.png)
 
